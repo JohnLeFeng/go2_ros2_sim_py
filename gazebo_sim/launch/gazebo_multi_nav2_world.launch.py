@@ -99,7 +99,7 @@ def generate_launch_description():
     for i, robot in enumerate(robots):
         namespace = robot['name']
         robot_name = robot['name']
-        xacro_file = os.path.join(os.path.join(get_package_share_directory('go2_description')), 'xacro', 'robot.xacro') ## CHANGE ME!!!!
+        xacro_file = os.path.join(os.path.join(get_package_share_directory('go2_description')), 'xacro', 'robot.xacro') ## CHANGE ME!!!! (go2_description, go1_description, b2_description, b2w_description)
         robot_desc = xacro.process_file(xacro_file, mappings={'robot_name': robot_name}).toxml()
         params_robot_state_publisher = {'robot_description': robot_desc, 'use_sim_time': use_sim_time}
 

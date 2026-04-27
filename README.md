@@ -1,4 +1,4 @@
-# Unitree go2, go1 simulation in Gazebo Sim
+# Unitree go2, go1, b2, b2w simulation in Gazebo Sim
 
 This repository allows you to run dog robots in the GAZEBO simulator. The robot can walk, rotate with 12 degrees of freedom, and features a `robot_msgs` interface. The robot moves using inverse kinematics, and its odometry is based on direct kinematics. Additionally, all functionalities are developed in Python.
 
@@ -174,6 +174,8 @@ You can change between robot models (e.g., go2, go1) in gazebo_multi_nav2_world.
 
 for go2: use "go2_description" 
 for go1: use "go1_description"
+for b2: use "b2_description"
+for b2w: use "b2w_description"
 
 Running Multiple Robots Simultaneously
 ![](./media/go1multi.png)
