@@ -16,12 +16,12 @@
         <joint name="base_static_joint" type="fixed">
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <parent link="world"/>
-            <child link="base"/>
+            <child link="base_link"/>
         </joint>
     </xacro:if> 
 
     <joint name='laser_scan' type='fixed'>
-        <parent link="base"/>,
+        <parent link="base_link"/>,
         <child link="laser_frame"/>
         <origin xyz="0.34218 0.0 0.17851" rpy="0 0 0" />
     </joint>
@@ -46,12 +46,12 @@
         </collision>
     </link>
 
-    <link name="base">
+    <link name="base_link">
     </link>
 
     <joint name="floating_base" type="fixed">
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <parent link="base"/>
+        <parent link="base_link"/>
         <child link="trunk"/>
     </joint>
 
@@ -59,7 +59,7 @@
     </link>
     
     <joint name="base_footprint_joint" type="fixed">
-        <parent link="base"/>
+        <parent link="base_link"/>
         <child link="base_footprint"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
@@ -89,7 +89,7 @@
     </link>
 
     <joint name="imu_joint" type="fixed">
-        <parent link="base"/>
+        <parent link="base_link"/>
         <child link="imu_link"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
     </joint>
@@ -167,7 +167,7 @@
     </link>
 
     <joint name="camera_face_joint" type="fixed">
-        <parent link="base"/>
+        <parent link="base_link"/>
         <child link="camera_face"/>
         <origin xyz="0.42 0 0.005" rpy="0 0 0"/>
     </joint>

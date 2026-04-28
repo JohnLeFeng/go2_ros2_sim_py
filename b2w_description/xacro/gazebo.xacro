@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
     <xacro:macro  name="robot_gazebo_sensors" params="robot_name">
 
-        <gazebo reference="base">
+        <gazebo reference="base_link">
             <turnGravityOff>false</turnGravityOff>
         </gazebo>
 
